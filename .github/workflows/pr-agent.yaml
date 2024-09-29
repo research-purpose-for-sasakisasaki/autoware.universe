@@ -10,26 +10,33 @@ jobs:
     uses: autowarefoundation/autoware-github-actions/.github/workflows/prevent-no-label-execution.yaml@v1
     with:
       label: tag:pr-agent
+
   pr_agent_job:
     needs: prevent-no-label-execution-pr-agent
     if: ${{ needs.prevent-no-label-execution-pr-agent.outputs.run == 'true' }}
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     permissions:
       issues: write
       pull-requests: write
       contents: write
     name: Run pr agent on every pull request, respond to user comments
     steps:
+      - name: Generate GitHub App token
+        id: generate-token
+        uses: tibdex/github-app-token@v2
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.PRIVATE_KEY }}
+
       - name: PR Agent action step
         id: pragent
         uses: Codium-ai/pr-agent@main
         env:
           OPENAI_KEY: ${{ secrets.OPENAI_KEY_PR_AGENT }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
           github_action_config.auto_review: false
           github_action_config.auto_describe: false
           github_action_config.auto_improve: false
-          # https://github.com/Codium-ai/pr-agent/blob/main/pr_agent/settings/configuration.toml
           pr_description.publish_labels: false
           config.model: gpt-4o
           config.model_turbo: gpt-4o
