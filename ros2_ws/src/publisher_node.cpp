@@ -45,54 +45,7 @@ private:
       *iter_b = 255;  // Blue
     }
 
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
-    printf("Publishing large PointCloud2 message: height=%d, width=%d\n", message.height, message.width);
+    // Removed redundant printf statements
     RCLCPP_INFO(this->get_logger(), "Publishing large PointCloud2 message: height=%d, width=%d", message.height, message.width);
     publisher_->publish(message);
   }
