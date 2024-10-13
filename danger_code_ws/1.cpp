@@ -5,7 +5,7 @@ int main() {
     char buffer[10];
 
     std::cout << "Enter a string: ";
-    gets(buffer); // Dangerous function - allows buffer overflow
+    fgets(buffer, sizeof(buffer), stdin); // Safer alternative to gets
 
     std::cout << "You entered: " << buffer << std::endl;
 
