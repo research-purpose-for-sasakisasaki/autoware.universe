@@ -123,6 +123,8 @@ void EKFLocalizer::update_predict_frequency(const rclcpp::Time & current_time)
           get_logger(), "EKF period may be too slow to finish pose smoothing!! (%f sec) ", ekf_dt_);
       }
 
+      RCLCPP_INFO(get_logger(), "ekf_dt_ = %f", ekf_dt_);
+
       /* Register dt and accumulate time delay */
       ekf_module_->accumulate_delay_time(ekf_dt_);
     }
